@@ -133,6 +133,10 @@
 		.slflnk {
 			a {
 				background: #bbb;
+
+				&.wb-navcurr {
+					@extend %ogpl-theme-wb-sm-wb-navcurr;
+				}
 			}
 		}
 	}
