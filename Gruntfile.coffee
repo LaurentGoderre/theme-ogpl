@@ -6,7 +6,6 @@ module.exports = (grunt) ->
 		"default"
 		"Default task, that runs the production build"
 		[
-			"hub"
 			"dist"
 		]
 	)
@@ -15,7 +14,6 @@ module.exports = (grunt) ->
 		"travis"
 		"Task run by the Travis-CI build"
 		[
-			"hub"
 			"dist"
 		]
 	)
@@ -405,6 +403,11 @@ module.exports = (grunt) ->
 					"dist"
 				]
 
+		"install-dependencies":
+			options:
+				cwd: "lib/wet-boew"
+				failOnError: false
+
 		connect:
 			options:
 				port: 8000
@@ -450,6 +453,7 @@ module.exports = (grunt) ->
 	@loadNpmTasks "grunt-gh-pages"
 	@loadNpmTasks "grunt-htmlcompressor"
 	@loadNpmTasks "grunt-hub"
+	@loadNpmTasks "grunt-install-dependencies"
 	@loadNpmTasks "grunt-sass"
 
 	@
