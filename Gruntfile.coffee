@@ -54,6 +54,15 @@ module.exports = (grunt) ->
 	)
 
 	@registerTask(
+		"init"
+		"Only needed when the repo is first cloned"
+		[
+			"install-dependencies"
+			"hub"
+		]
+	)
+
+	@registerTask(
 		"deploy"
 		"Build and deploy artifacts to wet-boew-dist"
 		[
