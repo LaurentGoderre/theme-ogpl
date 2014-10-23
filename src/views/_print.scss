@@ -7,3 +7,24 @@
 /*
   @title: Print view
  */
+%theme-ogpl-print-display-none-important {
+	display: none !important;
+}
+
+#wb-glb-mn {
+	@extend %theme-ogpl-print-display-none-important;
+}
+
+#wb-bc {
+	.breadcrumb {
+		margin-bottom: 0;
+	}
+	
+	a[href]:after {
+		content: "";
+	}
+}
+ 
+h1 {
+	margin-top: 0;
+}
