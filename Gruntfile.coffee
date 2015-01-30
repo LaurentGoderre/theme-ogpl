@@ -91,6 +91,7 @@ module.exports = (grunt) ->
 			"autoprefixer"
 			"usebanner:css"
 			"cssmin"
+			"cssmin_ie8_clean"
 		]
 	)
 
@@ -264,6 +265,15 @@ module.exports = (grunt) ->
 				ext: ".min.css"
 				dest: "dist/css"
 
+		cssmin_ie8_clean:
+			min:
+				expand: true
+				cwd: "dist/css"
+				src: [
+					"**/ie8*.min.css"
+				]
+				dest: "dist/css"
+
 		# Minify
 		uglify:
 			dist:
@@ -398,7 +408,7 @@ module.exports = (grunt) ->
 				options:
 					base: "dist"
 					middleware: (connect, options, middlewares) ->
-						middlewares.unshit(connect.compress(
+						middlewares.unshift(connect.compress(
 							filter: (req, res) ->
 								/json|text|javascript|dart|image\/svg\+xml|application\/x-font-ttf|application\/vnd\.ms-opentype|application\/vnd\.ms-fontobject/.test(res.getHeader('Content-Type'))
 						))
@@ -448,6 +458,7 @@ module.exports = (grunt) ->
 	@loadNpmTasks "grunt-contrib-htmlmin"
 	@loadNpmTasks "grunt-contrib-uglify"
 	@loadNpmTasks "grunt-contrib-watch"
+	@loadNpmTasks "grunt-cssmin-ie8-clean"
 	@loadNpmTasks "grunt-gh-pages"
 	@loadNpmTasks "grunt-hub"
 	@loadNpmTasks "grunt-install-dependencies"
