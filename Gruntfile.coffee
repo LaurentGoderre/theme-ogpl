@@ -377,6 +377,7 @@ module.exports = (grunt) ->
 			options:
 				collapseWhitespace: true
 				preserveLineBreaks: true
+				preventAttributesEscaping: true
 			all:
 				cwd: "dist/unmin"
 				src: [
