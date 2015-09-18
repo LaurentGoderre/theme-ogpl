@@ -208,7 +208,7 @@ module.exports = (grunt) ->
 						dest: "dist"
 						expand: true
 					}
-					
+
 					{
 						src: "*.txt"
 						dest: "<%= themeDist %>"
@@ -235,7 +235,7 @@ module.exports = (grunt) ->
 				#TODO: Remove in v4.1
 				options:
 					noProcess: [
-						'**/*.{png,gif,jpg,ico,ttf,otf,woff,svg,swf}'
+						'**/*.{png,gif,jpg,ico,ttf,eot,otf,woff,svg,swf}'
 					]
 					process: (content, filepath) ->
 						if filepath.match(/\.css/)
