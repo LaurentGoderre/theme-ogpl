@@ -244,6 +244,8 @@ module.exports = (grunt) ->
 
 		sass:
 			all:
+				options:
+					precision: 10
 				expand: true
 				cwd: "src"
 				src: "*.scss"
