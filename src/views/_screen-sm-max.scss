@@ -108,7 +108,7 @@
 	}
 
 	.sec-pnl {
-		@extend %small-view-under-bg-color-fff;
+		@extend %small-view-under-bg-color-fff !optional;
 		@extend %small-view-background-efefef;
 	}
 
