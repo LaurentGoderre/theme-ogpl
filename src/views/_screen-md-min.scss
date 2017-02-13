@@ -12,26 +12,16 @@
 	@include navigation-links;
 }
 
-%page-background {
-	background-color: #fff;
-}
-
 %white-bottom-border {
 	border-bottom: 1px solid #fff;
 }
 
 body {
-	background: #eee;
-
-	main {
-		@extend %page-background;
-	}
-
 	> {
 		header {
 			+ {
 				.container {
-					@extend %page-background;
+					background-color: $main-bg;
 				}
 			}
 		}
@@ -119,12 +109,6 @@ body {
 		.form-group {
 			width: 60%;
 		}
-	}
-}
-
-#wb-bc {
-	.container {
-		@extend %page-background;
 	}
 }
 
