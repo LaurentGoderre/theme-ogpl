@@ -16,18 +16,6 @@
 	border-bottom: 1px solid #fff;
 }
 
-body {
-	> {
-		header {
-			+ {
-				.container {
-					background-color: $main-bg;
-				}
-			}
-		}
-	}
-}
-
 #ogpl-logo {
 	padding: 10px 0;
 }
