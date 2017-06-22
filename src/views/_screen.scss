@@ -42,6 +42,11 @@
 	}
 }
 
+#wb-srch-sub {
+	float: right;
+	margin-left: 5px;
+}
+
 %submenu-colors {
 	background-color: #ccc;
 	color: #000;
@@ -148,6 +153,14 @@
 }
 
 [dir=rtl] {
+	#wb-srch-sub {
+		float: left;
+		margin: {
+			left: 0;
+			right: 5px;
+		}
+	}
+
 	#wb-dtmd {
 		float: left;
 	}
