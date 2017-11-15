@@ -268,10 +268,7 @@ module.exports = (grunt) ->
 			all:
 				expand: true
 				src: [
-					"**/*.scss"
-					"!lib/**"
-					"!node_modules/**"
-					"!dist/**"
+						"src/**/*.scss"
 				]
 
 		sass:
